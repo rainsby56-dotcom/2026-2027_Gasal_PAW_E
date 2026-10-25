@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+</head>
+<body>
+    <h1>Register</h1>
+
+    <form action="processData.php" method="POST">
+        <fieldset>
+            <legend>Person Details</legend>
+
+            <div>
+                <label for="surname">Surname</label>
+                <input type="text" name="surname" id="surname">
+            </div>
+
+            <div>
+                <label for="email">Email address</label>
+                <input type="text" name="email" id="email">
+            </div>
+
+            <div>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+            </div>
+
+            <div>
+                <label for="address">Street Address</label>
+                <textarea name="address" id="address"></textarea>
+            </div>
+
+            <div>
+                <label for="state">State</label>
+                <select name="state" id="state">
+                    <option value="">-- choose your state --</option>
+                    <option value="NSW">New South Wales</option>
+                    <option value="QLD">Queensland</option>
+                    <option value="VIC">Victoria</option>
+                    <option value="TAS">Tasmania</option>
+                    <option value="WA">Western Australia</option>
+                    <option value="SA">South Australia</option>
+                    <option value="ACT">Australian Capital Territory</option>
+                    <option value="NT">Northern Territory</option>
+                </select>
+            </div>
+
+            <input type="hidden" name="country" value="Australia">
+
+            <div>
+                <label>Gender</label>
+                <input type="radio" name="gender" value="Male"> Male
+                <input type="radio" name="gender" value="Female"> Female
+            </div>
+
+            <div>
+                <label>Vegetarian?</label>
+                <input type="checkbox" name="vegetarian" value="Yes"> Yes
+            </div>
+
+            <div>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

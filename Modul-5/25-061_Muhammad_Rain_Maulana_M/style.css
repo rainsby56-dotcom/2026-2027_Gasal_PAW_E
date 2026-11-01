@@ -1,0 +1,78 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    background: #fff;
+}
+
+.container { max-width: 900px; margin: 0 auto; }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #eee;
+}
+
+h1 { margin: 0; font-size: 24px; font-weight: 500; color: #337ab7; }
+.judul-form { font-size: 30px; }
+
+/* Tombol */
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 13px;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+}
+.btn-hijau  { background: linear-gradient(#6fb23a, #4f8f1f); border-color: #4a8a1c; }
+.btn-oranye { background: linear-gradient(#f07a1a, #c85a00); border-color: #b85200; }
+.btn-merah  { background: linear-gradient(#d9363e, #b01e26); border-color: #a01a21; }
+.btn:hover  { filter: brightness(0.92); }
+
+/* Tabel */
+table { width: 100%; border-collapse: collapse; border: 1px solid #ddd; }
+th, td { padding: 10px 8px; text-align: left; border-top: 1px solid #ddd; }
+thead th { background: #d9edf7; font-size: 12px; border-top: 0; }
+tbody td { font-size: 12px; color: #555; }
+tbody tr:hover { background: #f7fbfd; }
+.kosong { text-align: center; color: #999; padding: 20px; }
+
+/* Pesan */
+.alert { padding: 10px 14px; margin-bottom: 14px; border-radius: 4px; }
+.alert-sukses { background: #dff0d8; color: #3c763d; border: 1px solid #d6e9c6; }
+.alert-gagal  { background: #f2dede; color: #a94442; border: 1px solid #ebccd1; }
+
+/* Form */
+.form { margin-top: 30px; }
+.baris { display: flex; align-items: center; margin-bottom: 18px; }
+.baris label { width: 28%; padding-right: 20px; text-align: right; font-weight: bold; }
+.baris input {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #555;
+}
+.baris input:focus { outline: none; border-color: #66afe9; box-shadow: 0 0 6px rgba(102,175,233,.5); }
+.input-lebar  { width: 52%; }
+.input-sedang { width: 38%; }
+.baris.tombol { padding-left: 28%; }
+.baris.tombol .btn { margin-right: 4px; padding: 7px 14px; font-size: 14px; }
+
+@media (max-width: 600px) {
+    .baris { flex-direction: column; align-items: stretch; }
+    .baris label { width: 100%; text-align: left; margin-bottom: 4px; }
+    .input-lebar, .input-sedang { width: 100%; }
+    .baris.tombol { padding-left: 0; }
+}
